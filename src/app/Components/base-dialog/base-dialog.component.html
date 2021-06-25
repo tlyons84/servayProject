@@ -1,0 +1,13 @@
+<p-dialog class="dialogBoxStyle"  header="{{dialogTypeFlag}}" [(visible)]="showDialog" [resizable]="false" [draggable]="false" (onHide)="changeDisplay()">
+<div ngSwitch="{{dialogTypeFlag}}">
+  <div *ngSwitchCase="'profile'">
+    <srv-profile (displaySwitch)="changeDisplay()"></srv-profile>
+  </div>
+  <div *ngSwitchCase="'questionnaire'" >
+    <srv-questionnaire [profile]="profile" (displaySwitch)="changeDisplay()"></srv-questionnaire>
+  </div>
+  <div *ngSwitchCase="'questionnaireGenerator'">
+    <srv-questionnaire-generator (displaySwitch)="changeDisplay()"></srv-questionnaire-generator>
+  </div>
+</div>
+</p-dialog>

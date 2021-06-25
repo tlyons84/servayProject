@@ -1,0 +1,6 @@
+<div>
+  <p-menubar [model]="options"></p-menubar>
+</div>
+<div *ngIf="display==true">
+<srv-dialog [profile]="profile" [dialogTypeFlag]="actionFlag" [showDialog]="display" (hideDialog)="changeDisplay($event)"></srv-dialog>
+</div>

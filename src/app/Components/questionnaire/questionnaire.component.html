@@ -1,0 +1,45 @@
+<div>
+  <p-dropdown [hidden]="hideMe" optionLabel="name" [options]="servaySelection" [(ngModel)]="selectedServay" placeholder="Please select the servay Id" (onChange)="populateServay(selectedServay)"></p-dropdown>
+</div>
+
+<div [formGroup]="answerForm" *ngFor="let question of servay">
+<div ngSwitch="{{question.questionType}}">
+<div *ngSwitchCase="'radioButton'">
+  <div  class="p-col-12 p-md-12">
+  {{question.questioinName}}:
+  </div>
+  <div class="p-col-12 p-md-12">
+    <div class="p-field-radiobutton">
+      <p-radioButton id="{{question.questioinName}}" value="true" formControlName="{{question.questioinName}}" ></p-radioButton>
+      <label class="label" for="{{question.questioinName}}">true</label>
+    </div>
+    <div class="p-field-radiobutton">
+      <p-radioButton formControlName="{{question.questioinName}}" value="false"   id="{{question.questioinName}}" ></p-radioButton>
+      <label class="label" for="false">false</label>
+    </div>
+  </div>
+</div>
+  &nbsp;
+  &nbsp;
+  <div *ngSwitchCase="'input'">
+    <label class="label" for="{{question.questioinName}}">{{question.questioinName}}:</label>
+    <input id="{{question.questioinName}}"   class="p-inputtext-lg"  type="text" [(ngModel)]="userAnswer"formControlName="{{question.questioinName}}"  pInputText>
+  </div>
+</div>
+
+
+</div>
+&nbsp;
+&nbsp;
+<div  class="buttonDiv">
+  <p-button class="button"  pButton (onClick)="onSubmit()">submit</p-button>
+  <p-button class="button" pButton (onClick)="onClose()">Close</p-button>
+</div>
+<p-confirmDialog
+  key="meConfirm"
+  [style]="{ width: '50vw', top: '20px' }"
+  header="Confirm"
+  icon="pi pi-exclamation-triangle"
+></p-confirmDialog>
+
+

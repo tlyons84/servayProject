@@ -1,0 +1,49 @@
+<div [formGroup]="userForm" class="p-grid p-fluid">
+  <div  class="p-col-12 p-md-12">
+    Please Select a Role:
+  </div>
+  &nbsp;
+  <div class="p-col-12 p-md-12">
+    <div class="p-field-radiobutton">
+    <p-radioButton [pTooltip]="'Required'" name="role" id="role1" value="admin" [(ngModel)]="roleType" formControlName="role" ></p-radioButton>
+    <label class="label" for="role1">Adminstrator</label>
+    </div>
+    &nbsp;
+    <div class="p-field-radiobutton">
+      <p-radioButton name="role" value="user" [(ngModel)]="roleType" Id="role2" formControlName="role" ></p-radioButton>
+      <label class="label" for="role2">User</label>
+    </div>
+</div>
+  &nbsp;
+  &nbsp;
+  <div class="p-col-12 ">
+    <label class="label" for="name">Name(first and Last):</label>
+    <input id="name"  class="p-inputtext-lg"  type="text" formControlName="name" pInputText>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="p-col-12 ">
+    <label class="label" for="email">email(also user name):</label>
+    <input id="email"  class="p-inputtext-lg"  type="text" formControlName="email" pInputText>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="p-col-12">
+    <label class="label" for="phoneNum">Phone Number:</label>
+
+    <p-inputMask [style]="{'width':'250px'}" id="phoneNum"   mask="(999) 999-9999"  placeholder="(999) 999-9999"  formControlName="phoneNumber"></p-inputMask>
+
+</div>
+  <div>
+    <p-button class="button" pButton (onClick)="onSubmit()" >submit</p-button>
+    <p-button class="button" pButton (onClick)="onClose()">Close</p-button>
+  </div>
+
+</div>
+
+<p-confirmDialog
+  key="meConfirm"
+  [style]="{ width: '50vw', top: '20px' }"
+  header="Confirm"
+  icon="pi pi-exclamation-triangle"
+></p-confirmDialog>

@@ -1,0 +1,49 @@
+<div [formGroup]="servayForm" class="p-grid p-fluid">
+
+  <div  class="p-col-12 p-md-12">
+    Is this mandatory Question?:
+  </div>
+  &nbsp;
+  <div class="p-col-12 p-md-12">
+    <div class="p-field-radiobutton">
+      <p-radioButton [pTooltip]="'Required'" name="mandatory" id="mandatory1" value="true" [(ngModel)]="mandatory" formControlName="mandatory" ></p-radioButton>
+      <label class="label" for="mandatory1">true</label>
+    </div>
+    &nbsp;
+    <div class="p-field-radiobutton">
+      <p-radioButton name="mandatory" value="false" [(ngModel)]="mandatory" Id="mandatory2" formControlName="mandatory" ></p-radioButton>
+      <label class="label" for="mandatory2">false</label>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="p-col-12 ">
+    <label class="label" for="title">Provide title:</label>
+    <input id="title"  class="p-inputtext-lg"  type="text" formControlName="name" pInputText>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="p-col-12 ">
+    <p-dropdown id="questionType" optionLabel="name" [options]="questionType"  placeholder="Select a Question Type"  [(ngModel)]="selectedType" formControlName="type" ></p-dropdown>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="p-col-12 " *ngIf="setEnable()">
+    <label class="label" for="answers">Provide Answers:</label>
+    <input id="answers"  class="p-inputtext-lg"  type="text" formControlName="answers" pInputText>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div  class="buttonDiv">
+    <p-button class="button"  pButton (onClick)="onSubmit()">submit</p-button>
+    <p-button class="button" pButton (onClick)="onClose()">Close</p-button>
+  </div>
+
+</div>
+
+<p-confirmDialog
+  key="meConfirm"
+  [style]="{ width: '50vw', top: '20px' }"
+  header="Confirm"
+  icon="pi pi-exclamation-triangle"
+></p-confirmDialog>

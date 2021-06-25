@@ -1,10 +1,40 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {RouterModule, Routes} from "@angular/router";
+import {AppComponent} from "./app.component";
+import {loginComponent} from "./Components/login/login.component";
+import {landingPageComponent} from "./Components/landing-page/landing-page.component";
+import { AuthGuardService } from '../app/Components/authentication/authentication-guard.service' ;
+import { ModuleWithProviders } from '@angular/core';
 
-const routes: Routes = [];
+export const routes: Routes = [
+  {path:'', component:landingPageComponent, pathMatch:'full'},
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+  //   {
+//     path: '',
+//     component: AppComponent,
+//     canActivate: [AuthGuardService],
+//     canActivateChild: [AuthGuardService],
+//     children: [
+//       {
+//         path: '',
+//         component: landingPageComponent,
+//         data: { title: 'Comet' }
+//       },
+//       {
+//         path: 'login',
+//         component: loginComponent,
+//       },
+//       {
+//         path: 'home',
+//         component: landingPageComponent,
+//       },
+//
+//       // Fallback when no prior route is matched
+//       { path: '**', redirectTo: 'login', pathMatch: 'full' }
+//     ]
+//   },
+//
+ ];
+
+export const  AppRoutes: ModuleWithProviders<any> = RouterModule.forRoot(routes, {
+  scrollPositionRestoration: 'enabled'
+});

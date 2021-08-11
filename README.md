@@ -2,7 +2,7 @@ typically I place notes about running the code but as this is a demo project i w
 
 1. this is running off of index DB.
 2. this project was done in 8 hours. 
-3. I did not worry about the beauty of lay out that is something that can be cleaned once everything is said and done. 
+3. I did not worry about the beauty of lay out that is something that can be cleaned once everything is said and done. That being said i made one additional mistake it seems in my rush to get everything done i created a few very dumb typos please forgive me. I again did not correct them as i felt it would be disgenious to do so. 
 4. i built this project todisplay the power and full range of functionality of angular.
 5. there is a bug on the answer set that blocks it from inserting into index db. I debated on whether or not to fix it. However i felt it disingenous to do so. Then it would not longer be an accurate display of the work. I have planned to fix this bug in a forked project.
 6. currently though i am working on a rest api when time provides to enhance this. I will then retire and retool the index db.

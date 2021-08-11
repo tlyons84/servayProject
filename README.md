@@ -1,27 +1,12 @@
-# ServayProject
+typically I place notes about running the code but as this is a demo project i want to put a few details about it. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. this is running off of index DB.
+2. this project was done in 8 hours. 
+3. I did not worry about the beauty of lay out that is something that can be cleaned once everything is said and done. 
+4. i built this project todisplay the power and full range of functionality of angular.
+5. there is a bug on the answer set that blocks it from inserting into index db. I debated on whether or not to fix it. However i felt it disingenous to do so. Then it would not longer be an accurate display of the work. I have planned to fix this bug in a forked project.
+6. currently though i am working on a rest api when time provides to enhance this. I will then retire and retool the index db.
+7. here are my design notes: https://docs.google.com/document/d/1xBWlwoz-9-qB_hIFqZeYoN2eWZHPNpiqBUpOkVJsv0I/edit?usp=sharing 
+8. these arent complete notes but they will allow you to see whats going through my mind in development process. I started the project with this document and this following file. I used them as a road map to how i would go about deisgning this project. I Will tell you this is an SPA. That relies heavily on parent child communication. Forms are dyanamically driven based on user responses. 
+9. Draw.io file: https://drive.google.com/file/d/1QFDVcZg2bHNa4NXZGcOz7wOm639FkWed/view?usp=sharing
+10.please use the link above to download a draw.io document which will show you the architecture notes nd design that i employed. Again as this  was a time limited attempt some of these things i was able to get to some of them  i was not. However it will give you an idea of the depth and breath of the project.  
